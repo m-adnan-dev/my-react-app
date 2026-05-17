@@ -9,7 +9,7 @@ export default function Market() {
       color: "#198754",
     },
     {
-      icon: "🌾",
+      icon: "🍚",
       name: "Rice",
       price: "Rs. 7,500 / 40kg",
       desc: "High export demand increasing market value.",

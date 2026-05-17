@@ -1,5 +1,10 @@
 import { useState } from "react";
-
+import Wheat from "../Images/Wheat.jpg";
+import Vegetables from "../Images/Vegetables.webp";
+import Sugercane from "../Images/Sugercane.jpg";
+import Rice from "../Images/Rice.webp";
+import Maize from "../Images/Maize.webp";
+import Cotton from "../Images/Cotton.webp";
 export default function Crops() {
   const [selectedCrop, setSelectedCrop] = useState(null);
 
@@ -7,7 +12,7 @@ export default function Crops() {
     {
       name: "Wheat",
       icon: "🌾",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqdLv0sQnFUjmPeX_EDp37IgjrVtoIshV1KQ&s",
+      img: Wheat,
       season: "Rabi Crop",
       desc: "Pakistan’s main staple food crop grown widely in Punjab.",
       details:
@@ -16,7 +21,7 @@ export default function Crops() {
     {
       name: "Rice",
       icon: "🍚",
-      img: "https://t3.ftcdn.net/jpg/02/71/72/06/360_F_271720694_xeOnMuwr2oiP9PG7yn8cKet1upl76QOu.jpg",
+      img: Rice,
       season: "Kharif Crop",
       desc: "Major export crop of Pakistan grown in irrigated lands.",
       details:
@@ -25,7 +30,7 @@ export default function Crops() {
     {
       name: "Sugarcane",
       icon: "🎋",
-      img: "https://www.app.com.pk/wp-content/uploads/2024/02/Sugarcane.webp",
+      img: Sugercane,
       season: "Annual Crop",
       desc: "Cash crop used for sugar and industrial production.",
       details:
@@ -34,7 +39,7 @@ export default function Crops() {
     {
       name: "Cotton",
       icon: "🌿",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAhFtLoV7P3elxOtANj3GJA5i_7dvxHIpi2w&s",
+      img: Cotton,
       season: "Kharif Crop",
       desc: "Backbone of Pakistan textile industry.",
       details:
@@ -43,7 +48,7 @@ export default function Crops() {
     {
       name: "Maize",
       icon: "🌽",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLca53ap2Q6meYFN6Pxietz5FS7hZ9g5rAg&s",
+      img: Maize,
       season: "Kharif Crop",
       desc: "Used for food, oil, and animal feed.",
       details:
@@ -52,7 +57,7 @@ export default function Crops() {
     {
       name: "Vegetables",
       icon: "🥕",
-      img: "https://i.tribune.com.pk/media/images/vegetables1595221536-0/vegetables1595221536-0.jpg",
+      img: Vegetables,
       season: "All Season",
       desc: "Daily essential crops like onion, tomato, potato.",
       details:
