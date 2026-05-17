@@ -1,0 +1,125 @@
+/* ===== NAVBAR BASE (Modern Glass Effect) ===== */
+.animated-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+    background: rgba(25, 135, 84, 0.85) !important;
+    /* bootstrap success with transparency */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeDown 0.6s ease-in-out;
+}
+
+/* fade animation */
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== BRAND (modern gradient text) ===== */
+.brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    color: white !important;
+}
+
+.brand:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== NAV LINKS (modern pill + underline animation) ===== */
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 20px;
+}
+
+/* hover pill effect */
+.nav-link:hover {
+    color: #fff !important;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* animated underline */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    width: 0%;
+    height: 2px;
+    background: white;
+    transition: 0.3s ease;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.nav-link:hover::after {
+    width: 60%;
+}
+
+/* ===== ACTIVE LINK (modern pill highlight) ===== */
+.active-link {
+    color: #198754 !important;
+    background: white;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+/* ===== LOGIN BUTTON (modern gradient button) ===== */
+.login-btn {
+    border-radius: 30px;
+    padding: 10px 22px;
+    font-weight: 600;
+    border: none;
+    background: linear-gradient(135deg, #ffffff, #d4ffd4);
+    color: #198754;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn:hover {
+    transform: scale(1.07);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== MOBILE MENU SMOOTH DROP ===== */
+.slide-down {
+    animation: slideDown 0.35s ease;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== MOBILE IMPROVEMENT ===== */
+@media (max-width: 992px) {
+    .navbar-nav {
+        padding: 15px 0;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+}

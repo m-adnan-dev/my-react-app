@@ -182,3 +182,182 @@
     border-right-color: var(--border);
   }
 }
+/* PAGE BACKGROUND EFFECT */
+.weather-page {
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+}
+
+/* HERO ANIMATION */
+.hero-weather {
+  animation: fadeDown 0.8s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MAIN CARD */
+.weather-main-card {
+  border-radius: 18px;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover glow effect */
+.weather-main-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* big weather icon animation */
+.weather-icon {
+  font-size: 60px;
+  animation: float 2s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* stats */
+.stat p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* farming cards */
+.weather-card {
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
+}
+
+.weather-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+.contact-card {
+  border-radius: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* button animation */
+.contact-btn {
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.contact-btn:hover {
+  transform: scale(1.03);
+  background-color: #0b5ed7;
+}
+
+/* input focus effect */
+.form-control:focus {
+  box-shadow: 0 0 10px rgba(13, 110, 253, 0.3);
+  border-color: #0d6efd;
+}
+/* ===== HERO ===== */
+.about-hero {
+  background: linear-gradient(135deg, #198754, #0f5132);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  top: -80px;
+  right: -80px;
+}
+
+/* ===== STATS ===== */
+.stats-section {
+  background: #f8f9fa;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== GLASS CARD ===== */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== FEATURES ===== */
+.features-section {
+  background: white;
+}
+
+.feature-card-modern {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+.feature-card-modern:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== CTA ===== */
+.cta-section {
+  background: linear-gradient(135deg, #20c997, #198754);
+  padding: 80px 20px;
+}
+
+/* ===== FOOTER ===== */
+.footer-modern {
+  background: #0f5132;
+  color: white;
+  padding: 15px;
+}
