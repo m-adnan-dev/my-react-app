@@ -1,86 +1,243 @@
 export default function Contact() {
   return (
     <div>
-      {/* HERO */}
-      <section className="bg-primary text-white text-center py-5">
-        <div className="container">
-          <h1 className="display-5 fw-bold">Contact Us 📞</h1>
-          <p className="lead">
-            We are here to help farmers across Punjab, Pakistan
+      <style>{`
+        *{
+          margin:0;
+          padding:0;
+          box-sizing:border-box;
+        }
+
+        body{
+          font-family:'Poppins',sans-serif;
+          background:#f6faf7;
+        }
+
+        /* ===== HERO ===== */
+        .hero{
+          min-height:65vh;
+          background:linear-gradient(135deg,#198754,#0b3d2e);
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          color:white;
+          position:relative;
+          overflow:hidden;
+          padding:80px 20px;
+        }
+
+        .hero::before{
+          content:"";
+          position:absolute;
+          width:420px;
+          height:420px;
+          background:rgba(255,255,255,0.08);
+          border-radius:50%;
+          top:-120px;
+          right:-120px;
+        }
+
+        .hero::after{
+          content:"";
+          position:absolute;
+          width:320px;
+          height:320px;
+          background:rgba(255,255,255,0.05);
+          border-radius:50%;
+          bottom:-120px;
+          left:-120px;
+        }
+
+        .hero-content{
+          position:relative;
+          z-index:2;
+        }
+
+        .hero h1{
+          font-size:65px;
+          font-weight:800;
+        }
+
+        .hero p{
+          max-width:700px;
+          margin:20px auto;
+          font-size:18px;
+          opacity:0.95;
+          line-height:1.8;
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .section{
+          padding:100px 20px;
+        }
+
+        .section-title{
+          text-align:center;
+          font-size:45px;
+          font-weight:800;
+          color:#198754;
+          margin-bottom:60px;
+        }
+
+        /* ===== CARD ===== */
+        .card-ui{
+          background:white;
+          border-radius:28px;
+          padding:35px;
+          box-shadow:0 12px 30px rgba(0,0,0,0.06);
+          transition:0.4s;
+          height:100%;
+        }
+
+        .card-ui:hover{
+          transform:translateY(-10px);
+          box-shadow:0 25px 50px rgba(0,0,0,0.12);
+        }
+
+        /* ===== INFO TEXT ===== */
+        .info-title{
+          font-size:22px;
+          font-weight:800;
+          color:#198754;
+          margin-top:20px;
+          margin-bottom:10px;
+        }
+
+        .info-text{
+          color:#666;
+          line-height:1.7;
+        }
+
+        /* ===== FORM ===== */
+        .form-control{
+          border-radius:14px;
+          padding:12px;
+          border:1px solid #ddd;
+          transition:0.3s;
+        }
+
+        .form-control:focus{
+          border-color:#198754;
+          box-shadow:0 0 0 0.2rem rgba(25,135,84,0.15);
+        }
+
+        .btn-submit{
+          background:#198754;
+          color:white;
+          border:none;
+          padding:14px;
+          border-radius:40px;
+          font-weight:700;
+          width:100%;
+          transition:0.3s;
+        }
+
+        .btn-submit:hover{
+          background:#146c43;
+          transform:translateY(-3px);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer{
+          background:#0b3d2e;
+          color:white;
+          text-align:center;
+          padding:30px 20px;
+        }
+
+        .footer p{
+          margin:0;
+          opacity:0.9;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media(max-width:768px){
+          .hero h1{
+            font-size:40px;
+          }
+
+          .section-title{
+            font-size:32px;
+          }
+        }
+      `}</style>
+
+      {/* ===== HERO ===== */}
+      <section className="hero">
+        <div className="hero-content">
+          <h1>Contact Us 📞</h1>
+          <p>
+            We are always here to support farmers across Pakistan with smart
+            agriculture solutions, guidance, and digital tools.
           </p>
         </div>
       </section>
 
-      {/* CONTACT SECTION */}
-      <section className="py-5">
+      {/* ===== CONTACT SECTION ===== */}
+      <section className="section">
         <div className="container">
+          <h2 className="section-title">Get in Touch</h2>
+
           <div className="row g-4">
-            {/* CONTACT INFO */}
-            <div className="col-md-5">
-              <div className="card shadow-sm p-4 contact-card h-100">
-                <h4 className="fw-bold text-primary mb-3">📍 Our Office</h4>
-                <p>AgriPakistan Head Office, Lahore, Punjab, Pakistan</p>
+            {/* INFO */}
+            <div className="col-lg-5">
+              <div className="card-ui">
+                <h4 className="info-title">📍 Office</h4>
+                <p className="info-text">
+                  AgriPakistan Head Office, Okara, Punjab, Pakistan
+                </p>
 
-                <h4 className="fw-bold text-primary mt-4 mb-3">📞 Phone</h4>
-                <p>+92 300 1234567</p>
+                <h4 className="info-title">📞 Phone</h4>
+                <p className="info-text">+92 349 3428757</p>
 
-                <h4 className="fw-bold text-primary mt-4 mb-3">📧 Email</h4>
-                <p>support@agripakistan.com</p>
+                <h4 className="info-title">📧 Email</h4>
+                <p className="info-text">amir0000780@gmail.com</p>
 
-                <h4 className="fw-bold text-primary mt-4 mb-3">
-                  ⏰ Working Hours
-                </h4>
-                <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                <h4 className="info-title">⏰ Working Hours</h4>
+                <p className="info-text">Mon - Sat: 9:00 AM - 6:00 PM</p>
               </div>
             </div>
 
-            {/* CONTACT FORM */}
-            <div className="col-md-7">
-              <div className="card shadow-sm p-4 contact-card">
-                <h4 className="fw-bold text-primary mb-4">
-                  📝 Send Us a Message
-                </h4>
+            {/* FORM */}
+            <div className="col-lg-7">
+              <div className="card-ui">
+                <h4 className="info-title mb-4">📝 Send Message</h4>
 
                 <form>
                   <div className="mb-3">
-                    <label className="form-label">Full Name</label>
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Enter your name"
+                      placeholder="Full Name"
                     />
                   </div>
 
                   <div className="mb-3">
-                    <label className="form-label">Email</label>
                     <input
                       type="email"
                       className="form-control"
-                      placeholder="Enter your email"
+                      placeholder="Email Address"
                     />
                   </div>
 
                   <div className="mb-3">
-                    <label className="form-label">Subject</label>
                     <input
                       type="text"
                       className="form-control"
-                      placeholder="Message subject"
+                      placeholder="Subject"
                     />
                   </div>
 
                   <div className="mb-3">
-                    <label className="form-label">Message</label>
                     <textarea
+                      rows="5"
                       className="form-control"
-                      rows="4"
-                      placeholder="Write your message"
+                      placeholder="Write your message..."
                     ></textarea>
                   </div>
 
-                  <button className="btn btn-primary w-100 fw-bold contact-btn">
-                    Send Message 🚀
-                  </button>
+                  <button className="btn-submit">Send Message 🚀</button>
                 </form>
               </div>
             </div>
@@ -88,9 +245,9 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-primary text-white text-center py-3">
-        <p className="mb-0">© 2026 AgriPakistan | Farmer Support System 🇵🇰</p>
+      {/* ===== FOOTER ===== */}
+      <footer className="footer">
+        <p>© 2026 AgriPakistan | Farmer Support System 🇵🇰</p>
       </footer>
     </div>
   );
